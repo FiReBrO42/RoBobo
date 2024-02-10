@@ -19,7 +19,8 @@ permissions:
 concurrency:
   group: 'pages'
   cancel-in-progress: true
-#記得本地要先測試是否可以 npm run build
+# 記得本地要先測試是否可以 npm run build
+# 檢查設定 環境 是否分支被允許更改
 jobs:
   # 单次部署的工作描述
   build:
