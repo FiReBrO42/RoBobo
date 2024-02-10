@@ -39,13 +39,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload dist repository
-          path: './dist'
+       # 这里是新增的步骤，用于部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # 目标分支
+          folder: dist # 构建产物的文件夹路径
+          token: ${{ secrets.GITHUB_TOKEN }} # 认证令牌
