@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # 根据您的实际情况，可能是 main 或 master
+      - main # 或您的主分支名称，比如 master
 
 jobs:
   build-and-deploy:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3 # 更新到最新版本
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3 # 更新到最新版本
       with:
-        node-version: '14' # 根据您项目的实际需求选择 Node.js 版本
+        node-version: '20' # 指定使用 Node.js 20
 
     - name: Install Dependencies
       run: npm install
@@ -27,14 +27,9 @@ jobs:
     - name: Create .nojekyll File
       run: touch dist/.nojekyll
 
-    # Optional: Configure custom domain
-    # - name: Setup CNAME
-    #   run: echo 'www.example.com' > dist/CNAME
-
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages # GitHub Pages 分支
-        folder: dist # Vite 构建输出目录
-        token: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动创建的令牌，用于授权
-
+        branch: gh-pages # 指定部署到 GitHub Pages 的分支
+        folder: dist # 指定构建产物的目录
+        token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的 token 进行授权
