@@ -19,7 +19,7 @@ permissions:
 concurrency:
   group: 'pages'
   cancel-in-progress: true
-
+#記得本地要先測試是否可以 npm run build
 jobs:
   # 单次部署的工作描述
   build:
@@ -51,4 +51,4 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy..
+          FOLDER: dist # The folder the action should deploy.. 
