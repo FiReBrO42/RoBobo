@@ -1,24 +1,41 @@
 <template>
   <header class="header-container">
+    <!-- aside menu btn -->
+    <div class="asideMenu-btn-container">
+      <button type="button" class="asideMenu-btn" :class="{ hide: asideStatus }" aria-label="MenuButton"
+        @click="switchAsideMenu()">
+        <svg aria-hidden="true" class="icon">
+          <use xlink:href="#btn-arrow-left"></use>
+        </svg>
+      </button>
+    </div>
     <div class="header-content-container">
       <h1 class="header-logo">
         仙境啵啵
       </h1>
-      <div class="header-search-container">
+      <label class="header-search-container">
         <input type="text" class="header-search-input" placeholder="請輸入服飾名稱....">
         <span class="header-search-icon">
           <i class="icon ion-md-search"></i>
         </span>
-      </div>
+      </label>
     </div>
-    <AsideView />
+    <AsideView :asideStatus="asideStatus" />
   </header>
 </template>
 <script setup>
 import AsideView from '@/components/AsideView.vue'
+import { ref } from 'vue'
+
+const asideStatus = ref(false)
+
+const switchAsideMenu = () => {
+  asideStatus.value = !asideStatus.value
+}
 </script>
 <style lang="scss" >
 .header-container {
+  background: var(--bg-color) !important;
   position: fixed;
   top: 0;
   left: 50%;
@@ -81,5 +98,40 @@ import AsideView from '@/components/AsideView.vue'
     top: 50%;
     transform: translate(0, -50%);
     font-size: 1.25rem;
+  }
+}
+
+.asideMenu-btn-container {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translate(0, -50%);
+
+
+  .asideMenu-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-bg-color);
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+
+    &>svg {
+      width: 10px;
+      fill: none;
+      stroke: var(--font-color);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      &>svg {
+        stroke: var(--primary-color)
+      }
+    }
+
+    &.hide {
+      &>svg {
+        transform: rotate(180deg);
+      }
+    }
   }
 }</style>
