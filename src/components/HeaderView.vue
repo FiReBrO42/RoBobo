@@ -27,7 +27,7 @@
 import AsideView from '@/components/AsideView.vue'
 import { ref } from 'vue'
 
-const asideStatus = ref(false)
+const asideStatus = ref(true)
 
 const switchAsideMenu = () => {
   asideStatus.value = !asideStatus.value
@@ -37,6 +37,7 @@ const switchAsideMenu = () => {
 .header-container {
   background: var(--bg-color) !important;
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -134,4 +135,5 @@ const switchAsideMenu = () => {
       }
     }
   }
-}</style>
+}
+</style>
