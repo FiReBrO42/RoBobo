@@ -1,13 +1,22 @@
 <template>
   <SvgSave />
-  <HeaderView />
-  <div class="content">
-    <router-view></router-view>
+  <div class="layout">
+    <div class="AsideView-container">
+      <AsideView />
+    </div>
+    <div class="content">
+      <HeaderView />
+      <router-view></router-view>
+    </div>
+
   </div>
 </template>
 <script setup>
 import SvgSave from '@/components/SvgSave.vue'
+/* 組件 */
 import HeaderView from '@/components/HeaderView.vue'
+import AsideView from '@/components/AsideView.vue'
+
 </script>
 <style lang="scss" scoped>
 .content {
@@ -23,6 +32,15 @@ import HeaderView from '@/components/HeaderView.vue'
 body {
   background: var(--third-color) !important;
 }
+</style>
+<style lang="scss" scoped>
+.layout {
+  display: flex;
+}
 
-
+.AsideView-container {
+  display: block;
+  width: 9rem;
+  height: 100vh;
+}
 </style>
