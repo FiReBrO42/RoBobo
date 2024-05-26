@@ -129,6 +129,7 @@ const clickOtherType = () => {
 <style lang="scss" scoped>
 .top {
   margin-bottom: 2.5rem;
+  padding-left: 5rem;
   display: flex;
   align-items: center;
 }
@@ -136,6 +137,7 @@ const clickOtherType = () => {
 .title {
   color: var(--font-color);
   margin-right: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .type-container {

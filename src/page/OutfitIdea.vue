@@ -5,7 +5,7 @@
     <p class="txt">歡迎投稿玩家投稿, 不定期更新。</p>
   </div>
   <!-- card -->
-  <div>
+  <div class="card-box">
     <ul class="card-list-container">
       <li class="card-list">
         <!-- img -->
@@ -297,7 +297,11 @@
 </template>
 <script setup></script>
 <style lang="scss" scoped>
+.title-container {
+  padding-left: 3rem;
+}
 .title {
+  margin-bottom: 0.5rem;
   font-size: 25px;
   color: #3A3A3A;
 }
@@ -306,7 +310,10 @@
   color: #A6A6A6;
   font-size: 15px;
 }
-
+.card-box {
+  padding-left: 3rem;
+  margin-top: 1.25rem;
+}
 .card-list-container {
   display: flex;
   justify-content: flex-start;
@@ -335,7 +342,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: var(--primary-color);
   }
 }
@@ -361,7 +368,9 @@
       font-weight: 400;
     }
   }
-
+  .card-list-content-content>h3 {
+    font-weight: bold;
+  }
   .card-list-content-name {
     flex: 1;
 
@@ -387,7 +396,7 @@
   aspect-ratio: 1/1;
 
   &>svg {
-    fill: #F8F4F1;
+    color: #F8F4F1;
   }
 
   .card-list-index {
