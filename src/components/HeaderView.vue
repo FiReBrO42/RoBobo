@@ -21,7 +21,6 @@
 </script>
 <style lang="scss" scoped>
 .header-container {
-  background: var(--bg-color) !important;
   position: fixed;
   z-index: 99;
   top: 0;
@@ -41,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  width: 80%;
+  width: 85vw;
 }
 
 // LOGO圖

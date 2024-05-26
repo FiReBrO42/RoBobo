@@ -146,7 +146,7 @@ const switchAsideMenu = () => {
 
     .icon-container {
       &>svg {
-        fill: var(--primary-color);
+        color: var(--primary-color);
       }
     }
 
