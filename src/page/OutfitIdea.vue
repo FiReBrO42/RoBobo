@@ -7,10 +7,10 @@
   <!-- card -->
   <div class="card-box">
     <ul class="card-list-container">
-      <li class="card-list">
+      <li class="card-list" v-for="(item, index) in data" :key="index">
         <!-- img -->
         <figure class="card-list-img">
-          <img src="@/assets/img/outfitIdea/outfitIdea-1.png" alt="">
+          <img :src="getImage(item.imgUrl)" alt="">
         </figure>
         <!-- content -->
         <div class="card-list-content-container">
@@ -24,8 +24,8 @@
               </div>
               <!-- name -->
               <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
+                <h3>{{ item.headTop }}</h3>
+                <span v-if="item.headTopEffect">{{ item.headTopEffect }}</span>
               </div>
             </div>
             <div class="card-list-content-row">
@@ -36,8 +36,8 @@
               </div>
               <!-- name -->
               <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
+                <h3>{{ item.headMid }}</h3>
+                <span v-if="item.headMidEffect">{{ item.headMidEffect }}</span>
               </div>
             </div>
             <div class="card-list-content-row">
@@ -48,8 +48,8 @@
               </div>
               <!-- name -->
               <div class="card-list-content-name">
-                <h3>狐狸超長名字耳朵</h3>
-                <span>水霧效果</span>
+                <h3>{{ item.headBottom }}</h3>
+                <span v-if="item.headBottomEffect">{{ item.headBottomEffect }}</span>
               </div>
             </div>
             <div class="card-list-content-row">
@@ -60,8 +60,8 @@
               </div>
               <!-- name -->
               <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
+                <h3>{{ item.shawl }}</h3>
+                <span v-if="item.shawlEffect">{{ item.shawlEffect }}</span>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
               </div>
               <!-- name -->
               <div class="card-list-content-content">
-                <h3>波波麗娜貝貝多</h3>
+                <h3>{{ item.name }}</h3>
               </div>
             </div>
             <div class="card-list-content-row">
@@ -85,7 +85,7 @@
               </div>
               <!-- name -->
               <div class="card-list-content-content">
-                <h3>羅札那</h3>
+                <h3>{{ item.serverName }}</h3>
               </div>
             </div>
           </div>
@@ -97,197 +97,7 @@
           </svg>
           <div class="card-list-index">
             <p>
-              01
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="card-list">
-        <!-- img -->
-        <figure class="card-list-img">
-          <img src="@/assets/img/outfitIdea/outfitIdea-1.png" alt="">
-        </figure>
-        <!-- content -->
-        <div class="card-list-content-container">
-          <div>
-
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭上</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭中</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭下</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸超長名字耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>披肩</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- user -->
-          <div>
-            <div class="card-list-content-row">
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>玩家</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-content">
-                <h3>波波麗娜貝貝多</h3>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>伺服器</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-content">
-                <h3>羅札那</h3>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="card-list-index-container">
-          <svg aria-hidden="true" class="icon">
-            <use xlink:href="#icon-start"></use>
-          </svg>
-          <div class="card-list-index">
-            <p>
-              01
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="card-list">
-        <!-- img -->
-        <figure class="card-list-img">
-          <img src="@/assets/img/outfitIdea/outfitIdea-1.png" alt="">
-        </figure>
-        <!-- content -->
-        <div class="card-list-content-container">
-          <div>
-
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭上</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭中</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>頭下</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸超長名字耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <!-- position -->
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>披肩</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-name">
-                <h3>狐狸耳朵</h3>
-                <span>水霧效果</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- user -->
-          <div>
-            <div class="card-list-content-row">
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>玩家</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-content">
-                <h3>波波麗娜貝貝多</h3>
-              </div>
-            </div>
-            <div class="card-list-content-row">
-              <div class="card-list-content-title">
-                <!-- title -->
-                <p>伺服器</p>
-              </div>
-              <!-- name -->
-              <div class="card-list-content-content">
-                <h3>羅札那</h3>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="card-list-index-container">
-          <svg aria-hidden="true" class="icon">
-            <use xlink:href="#icon-start"></use>
-          </svg>
-          <div class="card-list-index">
-            <p>
-              01
+              {{ index + 1 }}
             </p>
           </div>
         </div>
@@ -295,11 +105,71 @@
     </ul>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import common from '@/active/commonFn.js'
+
+const { getImage } = common()
+const data = [
+  {
+    name: '波波麗娜貝貝多',
+    serverName: '羅札那',
+    imgUrl: '../assets/img/outfitIdea/outfitIdea-1.png',
+    headTop: '狐狸耳朵',
+    headTopEffect: '水霧效果',
+    headMid: '狐狸耳朵',
+    headMidEffect: '水霧效果',
+    headBottom: '狐狸耳朵',
+    headBottomEffect: '水霧效果',
+    shawl: '狐狸耳朵',
+    shawlEffect: '水霧效果',
+  },
+  {
+    name: '波波麗娜貝貝多',
+    serverName: '羅札那',
+    imgUrl: '../assets/img/outfitIdea/outfitIdea-1.png',
+    headTop: '狐狸耳朵',
+    headTopEffect: '水霧效果',
+    headMid: '狐狸耳朵',
+    headMidEffect: '水霧效果',
+    headBottom: '狐狸耳朵',
+    headBottomEffect: '水霧效果',
+    shawl: '狐狸耳朵',
+    shawlEffect: '水霧效果',
+  },
+  {
+    name: '波波麗娜貝貝多',
+    serverName: '羅札那',
+    imgUrl: '../assets/img/outfitIdea/outfitIdea-1.png',
+    headTop: '狐狸耳朵',
+    headTopEffect: '水霧效果',
+    headMid: '狐狸耳朵',
+    headMidEffect: '水霧效果',
+    headBottom: '狐狸耳朵',
+    headBottomEffect: '水霧效果',
+    shawl: '狐狸耳朵',
+    shawlEffect: '水霧效果',
+  },
+  {
+    name: '波波麗娜貝貝多',
+    serverName: '羅札那',
+    imgUrl: '../assets/img/outfitIdea/outfitIdea-1.png',
+    headTop: '狐狸耳朵',
+    headTopEffect: '水霧效果',
+    headMid: '狐狸耳朵',
+    headMidEffect: '水霧效果',
+    headBottom: '狐狸耳朵',
+    headBottomEffect: '水霧效果',
+    shawl: '狐狸耳朵',
+    shawlEffect: '水霧效果',
+  },
+]
+
+</script>
 <style lang="scss" scoped>
 .title-container {
-  padding-left: 3rem;
+  padding-left: 5rem;
 }
+
 .title {
   margin-bottom: 0.5rem;
   font-size: 25px;
@@ -310,29 +180,31 @@
   color: #A6A6A6;
   font-size: 15px;
 }
+
 .card-box {
   padding-left: 3rem;
   margin-top: 1.25rem;
 }
+
 .card-list-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .card-list {
   position: relative;
   display: flex;
   justify-content: center;
-  width: calc(50% - 2rem);
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+
   margin-bottom: 0.5rem;
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
   overflow: hidden;
-  gap: 2rem;
+
 
 
   &::after {
@@ -368,9 +240,11 @@
       font-weight: 400;
     }
   }
+
   .card-list-content-content>h3 {
     font-weight: bold;
   }
+
   .card-list-content-name {
     flex: 1;
 
@@ -410,4 +284,5 @@
       font-size: 35px;
     }
   }
-}</style>
+}
+</style>
