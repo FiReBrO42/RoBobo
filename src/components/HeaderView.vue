@@ -1,6 +1,6 @@
 <template>
   <header class="header-container">
-    
+
     <div class="header-content-container">
       <h1 class="header-logo">
         仙境啵啵
@@ -27,12 +27,10 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-
   background: var(--bg-color);
-  padding: 1.25rem 0;
-
+  padding: 1.25rem 9rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
 }
 
@@ -86,6 +84,4 @@
     font-size: 1.25rem;
   }
 }
-
-
 </style>
