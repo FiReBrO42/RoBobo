@@ -62,7 +62,8 @@ const switchAsideMenu = () => {
   flex-direction: column;
   gap: 1rem;
   background-color: var(--bg-color);
-  box-shadow: 0px 0 6px 0px #00000059;;
+  box-shadow: 0px 0 6px 0px #00000059;
+  ;
   padding: 1.25rem 0;
 
   &.hide {
@@ -78,14 +79,14 @@ const switchAsideMenu = () => {
   .asideMenu-btn {
     border: none;
     border-radius: 5px;
-    background-color: var(--btn-bg-color);
+    background-color: var(--btn-bg-color-opacity40);
     width: 2.5rem;
     aspect-ratio: 1/1;
 
     &>svg {
       width: 10px;
       fill: none;
-      stroke: var(--font-color);
+      stroke: var(--btn-color-dark);
       transition: all 0.3s ease;
     }
 
@@ -136,6 +137,7 @@ const switchAsideMenu = () => {
 
   .aside-list-content-name {
     opacity: 1;
+
     &.hide {
       transition: all 0.3s ease;
       opacity: 0;

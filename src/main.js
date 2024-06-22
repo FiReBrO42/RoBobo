@@ -1,7 +1,6 @@
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 

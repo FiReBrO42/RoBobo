@@ -1,11 +1,12 @@
 <template>
   <SvgSave />
   <div class="layout">
+    <HeaderView />
+    <FloatView v-draggable />
     <div class="AsideView-container">
       <AsideView />
     </div>
     <div class="content">
-      <HeaderView />
       <router-view></router-view>
     </div>
 
@@ -13,8 +14,10 @@
 </template>
 <script setup>
 import SvgSave from '@/components/SvgSave.vue'
+import vDraggable from '@/directives/draggable';
 /* 組件 */
 import HeaderView from '@/components/HeaderView.vue'
+import FloatView from '@/components/FloatView.vue'
 import AsideView from '@/components/AsideView.vue'
 
 </script>
@@ -30,6 +33,7 @@ body {
   width: 85vw;
 
 }
+
 .layout {
   display: flex;
 }
