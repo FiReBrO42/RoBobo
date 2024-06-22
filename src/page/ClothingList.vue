@@ -40,7 +40,7 @@
         </div>
         <!-- img -->
         <figure class="list-img">
-          <img src="@/assets/img/clothingList/clothingList-1.png" alt="">
+          <img :src="item.imgUrl" alt="">
           <figcaption class="list-name"> {{item.name}}</figcaption>
         </figure>
         <!-- BTN -->
@@ -118,7 +118,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headMid',
@@ -127,7 +127,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headBottom',
@@ -136,7 +136,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'shawl',
@@ -145,7 +145,7 @@
       enchant:'',
       enchantStatus:false,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headAll',
@@ -154,7 +154,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headTop',
@@ -163,7 +163,7 @@
       enchant:'',
       enchantStatus:false,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headTop',
@@ -172,7 +172,7 @@
       enchant:'',
       enchantStatus:false,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headTop',
@@ -181,7 +181,7 @@
       enchant:'',
       enchantStatus:false,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'shawl',
@@ -190,7 +190,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'headMid',
@@ -199,7 +199,7 @@
       enchant:'可至綿綿島附魔',
       enchantStatus:true,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
     {
       type:'shawl',
@@ -208,7 +208,7 @@
       enchant:'',
       enchantStatus:false,
       links: [],
-      img: getImage('../assets/img/clothingList/clothingList-1.png'),
+      imgUrl: getImage('/src/assets/img/clothingList/clothingList-1.png'),
     },
   ])
 
