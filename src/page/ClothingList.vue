@@ -119,7 +119,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headMid',
@@ -128,7 +128,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headBottom',
@@ -137,7 +137,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'shawl',
@@ -146,7 +146,7 @@ const cardList = ref([
     enchant: '',
     enchantStatus: false,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headAll',
@@ -155,7 +155,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headTop',
@@ -164,7 +164,7 @@ const cardList = ref([
     enchant: '',
     enchantStatus: false,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headTop',
@@ -173,7 +173,7 @@ const cardList = ref([
     enchant: '',
     enchantStatus: false,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headTop',
@@ -182,7 +182,7 @@ const cardList = ref([
     enchant: '',
     enchantStatus: false,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'shawl',
@@ -191,7 +191,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'headMid',
@@ -200,7 +200,7 @@ const cardList = ref([
     enchant: '可至綿綿島附魔',
     enchantStatus: true,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
   {
     type: 'shawl',
@@ -209,7 +209,7 @@ const cardList = ref([
     enchant: '',
     enchantStatus: false,
     links: [],
-    imgUrl: getImage('src/assets/img/clothingList/clothingList-1.png'),
+    imgUrl: getImage('/img/clothingList/clothingList-1.png'),
   },
 ])
 
