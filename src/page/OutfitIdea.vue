@@ -113,7 +113,7 @@ const data = [
   {
     name: '波波麗娜貝貝多',
     serverName: '羅札那',
-    imgUrl: 'src/assets/img/outfitIdea/outfitIdea-1.png',
+    imgUrl: 'assets/img/outfitIdea/outfitIdea-1.png',
     headTop: '狐狸耳朵',
     headTopEffect: '水霧效果',
     headMid: '狐狸耳朵',
