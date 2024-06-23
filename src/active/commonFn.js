@@ -7,7 +7,8 @@ export default function () {
       // new URL(url, import.meta.url).href 会根据当前模块的位置解析 url，并生成一个完整的路径
       // import.meta.env.BASE_URL 來動態獲取 base 路徑
       // return new URL(url, baseUrl).href;
-      return new URL(`../${url}`, import.meta.url).href;
+      const fullUrl = `${import.meta.env.BASE_URL}${url}`;
+      return new URL(`${fullUrl}`, import.meta.url).href;
     } catch (error) {
       console.error('Error loading image:', error);
       return ''; // 返回一个默认的占位符图片或空字符串
